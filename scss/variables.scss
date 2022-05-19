@@ -1,3 +1,26 @@
 //variables
 $color-primary:#358615;
 $color-secondary: black;
+
+
+//mapas
+$mapa-border: (
+    border-1:#853100,
+    border-2: white,
+    border-3:  rgb(224, 146, 0),
+ 
+);
+
+@each $colores, $color  in $mapa-border {
+    .border-#{$colores}{
+        color:$color;
+
+    }
+
+} 
+
+@mixin size($top,$left, $margin){
+    top:$top;
+    left:$left;
+    margin:$margin;
+}

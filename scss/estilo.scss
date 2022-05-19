@@ -22,7 +22,6 @@ grid-template-areas:
 }
 
 
-
 .sidenav{
 height: 100%;
 width: 20%;
@@ -81,7 +80,7 @@ main {
     position: relative;
     grid-area: footer;
 }
-.top-images, .bot-images {
+.top-images {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,23 +91,48 @@ main {
         width: 100% ;
         height: 100%;
     }
+
+}
+.bot-images {
+    @extend .top-images;  
 }
 
-.image1, .image2, .image3, .image4 {
+.image1 {
     position: relative; 
-    border: 3px solid #853100;
+    border: 3px solid ;
     transition: transform 0.7s;
     &:hover{
     transform: scale(1.3);
     }
+
+
 }
+.image2 {
+    @extend .image1;
 
+}
+.image3 {
+    @extend .image1;
 
-.imagenes_1, .imagenes_2, .imagenes_3, .imagenes_4 {
-    top: 20%;
-    left: 26%;
+}
+.image4 {
+    @extend .image1;
+
+}
+.imagenes_1 {
+@include size (20%,26%,0);
     color: yellow;
     position: absolute;
+}
+
+.imagenes_2 {
+@extend .imagenes_1
+}
+.imagenes_3 {
+@extend .imagenes_1
+}
+.imagenes_4 {
+@extend .imagenes_1  
 }
 
 
@@ -151,41 +175,32 @@ main {
 
 
 }
-.catalogo-1{
+.catalogo{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+}
+.catalogo-1{
+    @extend .catalogo;
     grid-area: catalogo-1;
 }
 
 .catalogo-2{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @extend .catalogo;
     grid-area: catalogo-2;
 }
 
 .catalogo-3{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @extend .catalogo;
     grid-area: catalogo-3;
 }
 .catalogo-4{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @extend .catalogo;
     grid-area: catalogo-4;
 }
 .catalogo-5{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @extend .catalogo;
     grid-area: catalogo-5;
     img{
          width: 100%;
@@ -315,6 +330,7 @@ grid-area: historia-fabrica-1;
             list-style-type: none;
             padding: 0; 
         }
+
         a{
           padding: 6px 8px 6px 16px;
         text-decoration: none;
@@ -352,17 +368,25 @@ grid-area: historia-fabrica-1;
 
     .image1, .image2, .image3, .image4 {
         position: relative; 
-        border: 7px solid #853100;
+        border: 7px solid;
         transition: transform 0.7s;
         &:hover{
             transform: scale(1.3);
         }
     }
-    .imagenes_1, .imagenes_2, .imagenes_3, .imagenes_4 {
-        top: 40%;
-        left: 28%;
+    .imagenes_1{
+        @include size;
         color: yellow;
         position: absolute;
+    }
+     .imagenes_2{
+         @extend .imagenes_1
+     }
+      .imagenes_3{
+        @extend .imagenes_1
+      }
+       .imagenes_4 {
+        @extend .imagenes_1
     }
     .footer {
         position: relative;
@@ -432,4 +456,6 @@ grid-area: historia-fabrica-1;
         }
    }
     /*comienzo-page-la-fabrica-desktop*/
+    //mapas
+
 }
