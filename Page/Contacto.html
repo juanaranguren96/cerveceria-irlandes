@@ -12,33 +12,52 @@
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <nav class="sidenav">
-        <IMG src= "../imagenes/imagenes index/logo.png " id="imagenlogo">
-    
-        <ul class="naveg">
-            <li><a href="../index.html"><h3>Volver al Inicio</h3></a></li>
-            <li><a href="nosotros.html"><h3>Nosotros</h3></a></li>
-            <li><a href="La Fabrica.html"><h3>La Fabrica </h3></a></li>
-            <li><a href="Nuestro catalago.html"><h3>Nuestro Catalogo</h3></a></li>
-
-        </ul> 
-        <footer class="redes">
-            <div>
-                <a href="../whatspp"><button><img src="../imagenes/imagenes contacto/whatsApp.png" width="50" height="50"></button></a>
-                <a href="../instagram"><button><img src="../imagenes/imagenes contacto/instagram.png" width="50" height="50"></button></a> 
-                <a href="../Facebook"><button><img src="../imagenes/imagenes contacto/logo facebook.png" width="50" height="50"></button></a>
-            </div>
+    <nav class=" navbar-expand-lg bg-light navbar-dark bg-dark " class="border m-4">
+        <div class="container-fluid" class="position-relative"    >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+            <a class="navbar-brand" href="index.html"><img id="imagenlogo" src="/imagenes/imagenes index/logo.png" alt="" class="img-fluid"></a>
+            <ul class="navbar-nav mb-2 mb-lg-0 " style="font-size:30px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../Page/Contacto.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">volver a inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Page/La Fabrica.html"> La Fabrica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Page/Nuestro catalago.html">Nuestro Catalogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Page/nosotros.html">nosotros</a>
+              </li>
+            </ul>
+           
             
-        </footer>
-    </nav>
-    <div class="form_contacto">
+          </div>
+  
+        </div>
+      </nav>
+    <div class="form-contacto">
         <form>
             <label for=""><h2>Datos de contacto</h2></label>
             <p><input type="text" placeholder="mail"></p>
             <label for=""><h2>desasarrolle su consulta</h2></label>
             <textarea name="" id="" cols="30" rows="10" placeholder="cosulta"></textarea>
             <input type="button" value="enviar">
-        </form>
+        </form> 
+        <footer >
+            <div class="redes-contactos">
+                <a class="redes" href="../whatspp"><button><img src="../imagenes/imagenes contacto/whatsApp.png"></button></a>
+                <a class="redes" href="../instagram"><button><img src="../imagenes/imagenes contacto/instagram.png"></button></a> 
+                <a class="redes" href="../Facebook"><button><img src="../imagenes/imagenes contacto/logo facebook.png"></button></a>
+            </div>
+            
+        </footer>
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

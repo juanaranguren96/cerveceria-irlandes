@@ -21,43 +21,6 @@ grid-template-areas:
 
 }
 
-
-.sidenav{
-height: 100%;
-width: 20%;
-text-decoration: none;
-    height: 100%;
-    
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: $color-secondary;
-    overflow-x: hidden;
-    padding-top: 20px;
-    display: block;
-    grid-area: sidenav;
-    ul {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        list-style-type: none;
-        padding: 0%;
-        width: 100%;
-    }
-    a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 10px;
-        color: white;
-        display: block;
-         &:hover{
-       color: yellow;
-        }
-    }
-   
-   
-}
 .cuerpo-index{
     grid-area: cuerpo-index;
 }
@@ -71,11 +34,7 @@ left: 10;
 
 
  
- 
-main {
-    margin-left: 20%;
-    padding: 0px 10px;
-  }
+
 .footer {
     position: relative;
     grid-area: footer;
@@ -212,10 +171,14 @@ main {
 
 
 
-/*fin-page-catalogo*/
+/*fin-page-contacto*/
 .form_contacto{
     position: relative;
     left: 50%;
+}
+.redes-contactos{
+    width:50px ;
+    height: 50px ;
 }
 
 /*comienzo-page-nosotros*/
@@ -268,18 +231,27 @@ grid-area: cuerpo-nosotros;
 }
 
 /*comienzo-page-fabrica-mobile*/
+
+
 .estructura-fabrica{
     display: grid;
     grid-template-areas:
-    "sidenav header-fabrica"
-    "sidenav main-fabrica"
+    " header-fabrica"
+    " main-fabrica"
     ;
 }
 .header-fabrica{
 grid-area: header-fabrica;
 display: flex;
 justify-content: center;
-padding-left: 30%;
+ h1{
+    font-size: $letra-fuente*4;
+    text-decoration: underline;
+ }
+ &:hover{
+    color: yellow;  
+  }
+
 
 }
 
@@ -291,19 +263,44 @@ padding-left: 30%;
     "historia-fabrica-2"
     "historia-fabrica-3"
     ;
-    text-align: justify;
     img{
-       width: 90%; 
+       width: 100%; 
     }
 }
 
 .historia-fabrica-1{
 grid-area: historia-fabrica-1;
+    p{
+        font-size:$letra-fuente*2;
+        text-align: justify;
+    }
+    &:hover{
+        color: #cccc00;  
+      }
 
 }
 .historia-fabrica-2{
     grid-area: historia-fabrica-2;
+    p{
+        font-size: $letra-fuente*2;
+        text-align: justify;
+    }
+    &:hover{
+        color: #cccc00;
+    }
 }
+
+.historia-fabrica-3{
+grid-area: historia-fabrica-3;
+    p{
+        font-size: $letra-fuente*2;
+        text-align: justify;
+    }
+    &:hover{
+        color: #cccc00;
+    }
+}
+
 
 
 /*media-desktop*/
@@ -314,44 +311,17 @@ grid-area: historia-fabrica-1;
             "sidenav cuerpo-index"
             "bot-index bot-index"
         }
-    .sidenav {
-            text-decoration: none;
-            height: 100%;
-            width: 20%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: $color-secondary;
-            overflow-x: hidden;
-            padding-top: 20px;
-            grid-area: sidenav;
-        ul{
-            list-style-type: none;
-            padding: 0; 
-        }
+   
 
-        a{
-          padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;  
-        }
-        &:hover{
-          color: yellow;  
-        }
-        }
+       
+
     .cuerpo-index{
         grid-area: cuerpo-index;
         }
     .bot-index{
         grid-area: bot-index;
         }
-    main {
-        margin-left: 20%;
-        padding: 0px 10px;
-        }
+    
     /* segundo-menu-navegacion-index*/
     .top-images, .bot-images {
         display: flex;
@@ -421,17 +391,41 @@ grid-area: historia-fabrica-1;
         display:flex;
         flex-direction: row;
         
+        p{
+            font-size: $letra-fuente*2;  
+            font-size: 20px ;
+            text-align: justify;
+        }
+        &:hover{
+            color: #cccc00;
+        }
     }
    
     .historia-nosotros-2{
         grid-area: historia-nosotros-2;
         display:flex;
         flex-direction: row;
+        p{
+            font-size: $letra-fuente*2;  
+            font-size: 20px ;
+            text-align: justify;
+        }
+        &:hover{
+            color: #cccc00;
+        }
     }
     .historia-nosotros-3{
         grid-area: historia-nosotros-3;
         display: flex;
-        flex-direction: row;   
+        flex-direction: row;
+        p{
+            font-size: $letra-fuente*2;  
+            font-size: 20px ;
+            text-align: justify;
+        }
+        &:hover{
+            color: #cccc00;
+        }   
     }
     
     /*page-catalogo-desktop*/
@@ -441,7 +435,7 @@ grid-area: historia-fabrica-1;
         display:flex;
         justify-content: right;
         grid-area: header-catalogo;
-        font-size: 50px;
+         font-size: 50px;
         text-decoration: underline;
     }     
     .main-catalogo{

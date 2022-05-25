@@ -1,7 +1,7 @@
 //variables
 $color-primary:#358615;
 $color-secondary: black;
-
+$letra-fuente: 10px;
 
 //mapas
 $mapa-border: (
@@ -18,9 +18,11 @@ $mapa-border: (
     }
 
 } 
-
+//mixin
 @mixin size($top,$left, $margin){
     top:$top;
     left:$left;
     margin:$margin;
 }
+
+
