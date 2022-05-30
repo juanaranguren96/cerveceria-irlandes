@@ -1,45 +1,46 @@
+
 @import "variables";
 
-body {
-    font-family: Old English Text MT;
-    background-color: $color-primary;
+body{
+    font-family: Old English text MT ;
+    background-color:$color-primario;
 }
-/*comienzo-index*/
-#imagenlogo {
-    height:10%; 
+#imagenlogo{
+    height: 10%;
     width:100%;
     margin-left: 1%;
-    object-fit:contain ; 
+    object-fit: contain;
 }
 .estructura-index{
-display: grid;
-grid-template-areas: 
-    "sidenav cuerpo-index"
-    "bot-index bot-index"    
-;
-
-
+    display: grid;
+    grid-template-columns:
+    "nav cuerpo-index"
+    "bot-index bot-index"
+    ;
 }
-
 .cuerpo-index{
-    grid-area: cuerpo-index;
+    grid-area:cuerpo-index;
 }
 .bot-index{
-grid-area: bot-index;
-display: flex;
-justify-content: center;
-left: 10;
-
+    grid-area: bot index;
+    display: flex;
+    justify-content: center;
+    left: 10;
 }
-
-
- 
-
-.footer {
-    position: relative;
+.footer{
     grid-area: footer;
 }
-.top-images {
+.top-imagenes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2%;
+    margin: right 20%; 
+    div img{
+        transform: translate(0%);
+    }
+}
+.bot-images{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,13 +51,16 @@ left: 10;
         width: 100% ;
         height: 100%;
     }
-
 }
-.bot-images {
-    @extend .top-images;  
+.image1{
+    position: relative;
+    border: 3px solid;
+    transition: transform 0.7s;
+    &:hover{
+        transform: scale(1.3);
+    }
 }
-
-.image1 {
+.image2{
     position: relative; 
     border: 3px solid ;
     transition: transform 0.7s;
@@ -64,197 +68,179 @@ left: 10;
     transform: scale(1.3);
     }
 
+}
+.image3{
+    position: relative; 
+    border: 3px solid ;
+    transition: transform 0.7s;
+    &:hover{
+    transform: scale(1.3);
+    }
 
 }
-.image2 {
-    @extend .image1;
+.image4{
+    position: relative; 
+    border: 3px solid ;
+    transition: transform 0.7s;
+    &:hover{
+    transform: scale(1.3);
+    }
 
 }
-.image3 {
-    @extend .image1;
-
-}
-.image4 {
-    @extend .image1;
-
-}
-.imagenes_1 {
-@include size (20%,26%,0);
+.imagenes-1{
+    top: 50%;
+    left: 30%;
+    margin: 0;
     color: yellow;
     position: absolute;
 }
-
-.imagenes_2 {
-@extend .imagenes_1
+.imagenes-2{
+    top: 50%;
+    left: 30%;
+    margin: 0;
+    color: yellow;
+    position: absolute;
 }
-.imagenes_3 {
-@extend .imagenes_1
+.imagenes-3{
+    top: 50%;
+    left: 30%;
+    margin: 0;
+    color: yellow;
+    position: absolute;
 }
-.imagenes_4 {
-@extend .imagenes_1  
+ .imagenes-4{
+    top: 50%;
+    left: 30%;
+    margin: 0;
+    color: yellow;
+    position: absolute;
 }
-
-
-   
-
-
-/*fin-del-index*/
-/*page-catalogo-comienzo*/
-.estructura-catalogo  {
-    display: grid ;
-    grid-template-areas: 
-    "sidenav header-catalogo"
-    "sidenav main-catalogo"
+//fin-del-index
+//page-catalogo-comienzo
+.estructura-catalogo{
+    display: grid;
+    grid-template-rows: 
+    "nav header-catalogo"
+    "nav main-catalogo"
     ;
-    
 }
-
-.header-catalogo {
-    display:flex;
+.header-catalogo{
+    display: flex;
     justify-content: center;
     grid-area: header-catalogo;
     text-decoration: underline;
-    h3 {
-        width: 60%;
-        padding: 15px;
+    h3{
+        width:60%;
+        padding:15px;
     }
-    
 }
-
 .main-catalogo{
-    grid-area: main-catalogo;
+    grid-area:main catalogo;
     display: grid;
-    grid-template-areas:
+    grid-template-areas: 
     "catalogo-1 catalogo-1"
     "catalogo-2 catalogo-2"
     "catalogo-3 catalogo-3"
     "catalogo-4 catalogo-4"
     "catalogo-5 catalogo-5"
     ;
-
-
 }
 .catalogo{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center; 
+    align-items:center;
 }
 .catalogo-1{
-    @extend .catalogo;
-    grid-area: catalogo-1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    grid-area:catalogo-1
 }
-
 .catalogo-2{
-    @extend .catalogo;
-    grid-area: catalogo-2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    grid-area:catalogo-2;
 }
-
 .catalogo-3{
-    @extend .catalogo;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
     grid-area: catalogo-3;
 }
 .catalogo-4{
-    @extend .catalogo;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
     grid-area: catalogo-4;
 }
 .catalogo-5{
-    @extend .catalogo;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
     grid-area: catalogo-5;
     img{
-         width: 100%;
+        width:100%;
     }
 }
-
-   
-
-
-
-
-/*fin-page-contacto*/
-.form_contacto{
+//fin-page-contacto
+.form-contacto{
     position: relative;
     left: 50%;
 }
-.redes-contactos{
-    width:50px ;
-    height: 50px ;
-}
-
-/*comienzo-page-nosotros*/
+//comienzo-page-nosotros
 .estructura-nosotros{
     display: grid;
     grid-template-areas: 
-    "sidenav sidenav" 
-    "titulo-nosotros titulo-nosotros"
-    "cuerpo-nosotros cuerpo-nosotros"
+    "nav "
+    "titulo-nosotros"
+    "cuerpot-nosotros"
     ;
-    
-}
-.titulo-nosotros{
-    grid-area: titulo-nosotros;
-    display: flex;
-    justify-content: center;
-    font-size: 10px;
-}
-
-/*cuerpo-nosotros*/
-.cuerpo-nosotros{
-grid-area: cuerpo-nosotros;
- display: grid;
-    
-    grid-template-areas: 
-    "intro-nosotros-1" 
-    "historia-nosotros-2"
-    "historia-nosotros-3";
     img{
         width: 230px;
-
     }
 }
-
 .intro-nosotros-1{
     grid-area: intro-nosotros-1;
     display: flex;
     flex-direction: column;
 }
-
 .historia-nosotros-2{
     grid-area: historia-nosotros-2;
-    display:flex;
+    display: flex;
     flex-direction: column-reverse;
 }
 .historia-nosotros-3{
-    grid-area: historia-nosotros-3;
+    grid-area: historia-nosotro-3;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
-
-/*comienzo-page-fabrica-mobile*/
-
-
+//comienzo-page-fabrica-mobile
 .estructura-fabrica{
     display: grid;
-    grid-template-areas:
-    " header-fabrica"
-    " main-fabrica"
+    grid-template-areas: 
+    "header-fabrica"
+    "main-fabrica"
     ;
 }
 .header-fabrica{
-grid-area: header-fabrica;
-display: flex;
-justify-content: center;
- h1{
-    font-size: $letra-fuente*4;
-    text-decoration: underline;
- }
- &:hover{
-    color: yellow;  
-  }
-
-
+    grid-area: header-fabrica;
+    display: flex;
+    justify-content:center;
+    hi{
+        font-size: 40px;
+        text-decoration: underline;
+    }
+    &:hover{
+        color: yellow;
+    }
 }
-
 .main-fabrica{
     grid-area: main-fabrica;
     display: grid;
@@ -264,46 +250,40 @@ justify-content: center;
     "historia-fabrica-3"
     ;
     img{
-       width: 100%; 
+        width: 100%;
     }
 }
-
 .historia-fabrica-1{
-grid-area: historia-fabrica-1;
+    grid-area: historia-fabrica-1;
     p{
-        font-size:$letra-fuente*2;
+        font-size: 20px;
         text-align: justify;
     }
     &:hover{
-        color: #cccc00;  
-      }
-
+        color: #cccc00;
+    }
 }
 .historia-fabrica-2{
     grid-area: historia-fabrica-2;
     p{
-        font-size: $letra-fuente*2;
+        font-size: 20px;
         text-align: justify;
-    }
+        }
     &:hover{
-        color: #cccc00;
-    }
+            color: #cccc00;
+        }
 }
-
 .historia-fabrica-3{
-grid-area: historia-fabrica-3;
-    p{
-        font-size: $letra-fuente*2;
-        text-align: justify;
+    grid-area: historia-fabrica-3;
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+        &:hover{
+            color: #cccc00;
+        }
     }
-    &:hover{
-        color: #cccc00;
-    }
-}
-
-
-
-/*media-desktop*/
+//media-desktop
 @media screen and (min-width:1024px) { 
     .estructura-index{
         display: grid;
@@ -322,7 +302,7 @@ grid-area: historia-fabrica-3;
         grid-area: bot-index;
         }
     
-    /* segundo-menu-navegacion-index*/
+    // segundo-menu-navegacion-index
     .top-images, .bot-images {
         display: flex;
         flex-direction: row;
@@ -345,111 +325,120 @@ grid-area: historia-fabrica-3;
         }
     }
     .imagenes_1{
-        @include size;
+        top: 50%;
+        left: 30%;
+       margin: 0%;
         color: yellow;
         position: absolute;
     }
      .imagenes_2{
-         @extend .imagenes_1
+        top: 50%;
+        left: 30%;
+       margin: 0%;
+        color: yellow;
+        position: absolute;
      }
       .imagenes_3{
-        @extend .imagenes_1
+        top: 50%;
+        left: 30%;
+       margin: 0%;
+        color: yellow;
+        position: absolute;
       }
        .imagenes_4 {
-        @extend .imagenes_1
+        top: 50%;
+        left: 30%;
+       margin: 0%;
+        color: yellow;
+        position: absolute;
     }
     .footer {
         position: relative;
         grid-area: bot-index;
         display: flex;
     }
-
-
-    /*cuerpo-nosotros*/
-.estructura-nosotros{
- 
-     display: grid;
-        grid-template-areas:
-        "sidenav titulo-nosotros"
-        "sidenav cuerpo-nosotros"
-        ;
-       
-        
-    }
-    .cuerpo-nosotros{
-        grid-template-areas: 
-        "intro-nosotros-1"
-        "historia-nosotros-2"
-        "historia-nosotros-3"
-        ;  
-        img{
-            width: 50%;
-        }
-    }
-    .intro-nosotros-1{
-        grid-area: intro-nosotros-1;
-        display:flex;
-        flex-direction: row;
-        
-        p{
-            font-size: $letra-fuente*2;  
-            font-size: 20px ;
-            text-align: justify;
-        }
-        &:hover{
-            color: #cccc00;
-        }
-    }
-   
-    .historia-nosotros-2{
-        grid-area: historia-nosotros-2;
-        display:flex;
-        flex-direction: row;
-        p{
-            font-size: $letra-fuente*2;  
-            font-size: 20px ;
-            text-align: justify;
-        }
-        &:hover{
-            color: #cccc00;
-        }
-    }
-    .historia-nosotros-3{
-        grid-area: historia-nosotros-3;
-        display: flex;
-        flex-direction: row;
-        p{
-            font-size: $letra-fuente*2;  
-            font-size: 20px ;
-            text-align: justify;
-        }
-        &:hover{
-            color: #cccc00;
-        }   
-    }
-    
-    /*page-catalogo-desktop*/
-        
-    
-    .header-catalogo {
-        display:flex;
-        justify-content: right;
-        grid-area: header-catalogo;
-         font-size: 50px;
-        text-decoration: underline;
-    }     
-    .main-catalogo{
-        display: grid;
-        grid-template-areas:
-        "catalogo-1 catalogo-2"
-        "catalogo-3 catalogo-4"
-        "catalogo-5 catalogo-5"
-        ;
-        img{
-           width: 40%;  
-        }
-   }
-    /*comienzo-page-la-fabrica-desktop*/
-    //mapas
-
 }
+   //cuerpo-nosotros
+   .estructura-nosotros{
+ 
+    display: grid;
+       grid-template-areas:
+       "sidenav titulo-nosotros"
+       "sidenav cuerpo-nosotros"
+       ;
+      
+       
+   }
+   .cuerpo-nosotros{
+       grid-template-areas: 
+       "intro-nosotros-1"
+       "historia-nosotros-2"
+       "historia-nosotros-3"
+       ;  
+       img{
+           width: 50%;
+       }
+   }
+   .intro-nosotros-1{
+       grid-area: intro-nosotros-1;
+       display:flex;
+       flex-direction: row;
+       
+       p{  
+           font-size: 20px ;
+           text-align: justify;
+       }
+       &:hover{
+           color: #cccc00;
+       }
+   }
+   .historia-nosotros-2{
+    grid-area: historia-nosotros-2;
+    display:flex;
+    flex-direction: row;
+    p{
+        font-size: 20px;  
+        font-size: 20px ;
+        text-align: justify;
+    }
+    &:hover{
+        color: #cccc00;
+    }
+}
+.historia-nosotros-3{
+    grid-area: historia-nosotros-3;
+    display: flex;
+    flex-direction: row;
+    p{
+        font-size: 20px;  
+        font-size: 20px ;
+        text-align: justify;
+    }
+    &:hover{
+        color: #cccc00;
+    }   
+}
+
+/*page-catalogo-desktop*/
+    
+
+.header-catalogo {
+    display:flex;
+    justify-content: right;
+    grid-area: header-catalogo;
+     font-size: 50px;
+    text-decoration: underline;
+}     
+.main-catalogo{
+    display: grid;
+    grid-template-areas:
+    "catalogo-1 catalogo-2"
+    "catalogo-3 catalogo-4"
+    "catalogo-5 catalogo-5"
+    ;
+    img{
+       width: 40%;  
+    }
+}
+/*comienzo-page-la-fabrica-desktop*/
+//mapas
