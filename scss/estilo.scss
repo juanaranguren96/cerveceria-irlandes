@@ -5,6 +5,7 @@ body{
     font-family: Old English text MT ;
     background-color:$color-primario;
 }
+/*comienzo-index-mobile*/
 #imagenlogo{
     height: 10%;
     width:100%;
@@ -57,6 +58,9 @@ body{
         position: absolute;
         color: #cccc00;
     }
+    a:hover{
+        color: #853100;
+    }
 }
 
 .redes-index{
@@ -66,8 +70,9 @@ body{
     }
 }
 
-//fin-del-index
-//page-catalogo-comienzo
+/*fin-del-index-mobile*/
+
+/*page-catalogo-comienzo-mobile*/
 .estructura-catalogo{
     display: grid;
     grid-template-areas: 
@@ -95,7 +100,7 @@ body{
     img{
         width: 200px;
     }
-    }
+}
     .cata{
         font-size: $letra-fuente*3;
          list-style: none;
@@ -120,10 +125,12 @@ body{
          }
        }
      
-     }  
+    }  
      
 
-//fin-page-contacto
+/*fin-page-contalogo-mobile*/
+
+/*comienzo-page-contacto*/
 .form-titulo{
     background-color: $color-terciario;
     display: flex;
@@ -137,7 +144,7 @@ body{
 .form-main{
 display: flex;
 justify-content: center;
-width: 450px;
+width: 100%;
 margin: auto;
 background: rgba(0,0,0,0.5);
 padding: 10px 20px;
@@ -167,8 +174,11 @@ textarea{
 
 }
 #button-form{
+    background: #31384a;
 
-    
+ &:hover{
+    cursor: pointer;
+ }   
 }
     
 }
@@ -185,7 +195,9 @@ textarea{
     height: 50px;
     }
 }
-//comienzo-page-nosotros
+/*fin-page-contacto-mobile*/
+
+/*comienzo-page-nosotros-mobile*/
 .estructura-nosotros{
     display: grid;
     grid-template-areas: 
@@ -193,26 +205,54 @@ textarea{
     "titulo-nosotros"
     "cuerpot-nosotros"
     ;
-    img{
-        width: 230px;
-    }
+   
+}
+.titulo-nosotros{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-decoration: underline;
 }
 .intro-nosotros-1{
     grid-area: intro-nosotros-1;
     display: flex;
     flex-direction: column;
+    img{
+        width: 100%;
+    }
+    p{
+        margin: 15px;
+        text-align: justify;
+    }
+    
 }
 .historia-nosotros-2{
     grid-area: historia-nosotros-2;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; 
+    img{
+       width: 100%;
+    }
+    p{
+        margin: 15px;
+        text-align: justify;
+    }
 }
 .historia-nosotros-3{
     grid-area: historia-nosotro-3;
     display: flex;
     flex-direction: column;
+    img{
+      width: 100%;
+    }
+    p{
+        margin: 15px;
+        text-align: justify;
+    }
 }
-//comienzo-page-fabrica-mobile
+/*fin-page-nostros-mobile*/
+
+/*comienzo-page-fabrica-mobile*/
 .estructura-fabrica{
     display: grid;
     grid-template-areas: 
@@ -242,7 +282,9 @@ textarea{
     ;
     img{
         width: 100%;
+        height: 250px;
     }
+    margin: 10px;
 }
 .historia-fabrica-1{
     grid-area: historia-fabrica-1;
@@ -266,6 +308,7 @@ textarea{
 }
 .historia-fabrica-3{
     grid-area: historia-fabrica-3;
+       
         p{
             font-size: 20px;
             text-align: justify;
@@ -277,6 +320,7 @@ textarea{
 //media-desktop
 
 @media screen and (min-width:1024px) { 
+ /*comienzo-page-index-desktop*/   
     .estructura-index{
         display: grid;
         grid-template-areas: 
@@ -352,7 +396,9 @@ nav{
     }
     
 }
-   //cuerpo-nosotros
+/*fin-page-index-desktop*/
+
+   /*comienzo-page-nosotros-desktop*/
    .estructura-nosotros{
     display: grid;
        grid-template-areas:
@@ -367,16 +413,18 @@ nav{
        "historia-nosotros-3"
        ;  
        img{
-           width: 50%;
+           width: 500px;
+           height: 400px;
        }
    }
    .intro-nosotros-1{
        grid-area: intro-nosotros-1;
        display:flex;
        flex-direction: row;
+
        
        p{  
-           font-size: 20px ;
+           font-size: $letra-fuente*2 ;
            text-align: justify;
        }
        &:hover{
@@ -388,8 +436,7 @@ nav{
     display:flex;
     flex-direction: row;
     p{
-        font-size: 20px;  
-        font-size: 20px ;
+        font-size:$letra-fuente*2;  
         text-align: justify;
     }
     &:hover{
@@ -409,8 +456,9 @@ nav{
         color: #cccc00;
     }   
 }
+/*fin-page-nosotros-desktop*/
 
-/*page-catalogo-desktop*/
+/*comienzo-page-catalogo-desktop*/
     
 
 .header-catalogo {
@@ -452,5 +500,20 @@ grid-area:catalogo-1 ;
     grid-area: catalogo-5;
    
 }
-}
 /*comienzo-page-la-fabrica-desktop*/
+
+.main-fabrica{
+    margin: 20px;
+    img{
+        width: 100%; 
+        height: 450px;   
+    }
+    
+}
+/*comienzo-page-contacto-desktop*/
+.form-main{
+    width: 450px;
+}
+}
+
+

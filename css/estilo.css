@@ -20,6 +20,7 @@ body {
   font-family: Old English text MT;
   background-color: #358615; }
 
+/*comienzo-index-mobile*/
 #imagenlogo {
   height: 10%;
   width: 100%;
@@ -62,12 +63,16 @@ body {
     top: 145%;
     position: absolute;
     color: #cccc00; }
+  .cuerpo-index a:hover {
+    color: #853100; }
 
 .redes-index {
   grid-area: redes-index; }
   .redes-index img {
     width: 100px; }
 
+/*fin-del-index-mobile*/
+/*page-catalogo-comienzo-mobile*/
 .estructura-catalogo {
   display: grid;
   grid-template-areas: "nav" " header-catalogo" " main-catalogo"; }
@@ -107,6 +112,8 @@ body {
     .cata > li:hover > ul {
       display: block; }
 
+/*fin-page-contalogo-mobile*/
+/*comienzo-page-contacto*/
 .form-titulo {
   background-color: #4f4f4f;
   display: flex;
@@ -118,7 +125,7 @@ body {
 .form-main {
   display: flex;
   justify-content: center;
-  width: 450px;
+  width: 100%;
   margin: auto;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
@@ -143,6 +150,10 @@ body {
     min-height: 100px;
     max-height: 200px;
     max-width: 100%; }
+  .form-main #button-form {
+    background: #31384a; }
+    .form-main #button-form:hover {
+      cursor: pointer; }
 
 .redes-contactos {
   display: flex;
@@ -153,27 +164,50 @@ body {
     width: 50px;
     height: 50px; }
 
+/*fin-page-contacto-mobile*/
+/*comienzo-page-nosotros-mobile*/
 .estructura-nosotros {
   display: grid;
   grid-template-areas: "nav " "titulo-nosotros" "cuerpot-nosotros"; }
-  .estructura-nosotros img {
-    width: 230px; }
+
+.titulo-nosotros {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-decoration: underline; }
 
 .intro-nosotros-1 {
   grid-area: intro-nosotros-1;
   display: flex;
   flex-direction: column; }
+  .intro-nosotros-1 img {
+    width: 100%; }
+  .intro-nosotros-1 p {
+    margin: 15px;
+    text-align: justify; }
 
 .historia-nosotros-2 {
   grid-area: historia-nosotros-2;
   display: flex;
   flex-direction: column-reverse; }
+  .historia-nosotros-2 img {
+    width: 100%; }
+  .historia-nosotros-2 p {
+    margin: 15px;
+    text-align: justify; }
 
 .historia-nosotros-3 {
   grid-area: historia-nosotro-3;
   display: flex;
   flex-direction: column; }
+  .historia-nosotros-3 img {
+    width: 100%; }
+  .historia-nosotros-3 p {
+    margin: 15px;
+    text-align: justify; }
 
+/*fin-page-nostros-mobile*/
+/*comienzo-page-fabrica-mobile*/
 .estructura-fabrica {
   display: grid;
   grid-template-areas: "header-fabrica" "main-fabrica"; }
@@ -191,9 +225,11 @@ body {
 .main-fabrica {
   grid-area: main-fabrica;
   display: grid;
-  grid-template-areas: "historia-fabrica-1" "historia-fabrica-2" "historia-fabrica-3"; }
+  grid-template-areas: "historia-fabrica-1" "historia-fabrica-2" "historia-fabrica-3";
+  margin: 10px; }
   .main-fabrica img {
-    width: 100%; }
+    width: 100%;
+    height: 250px; }
 
 .historia-fabrica-1 {
   grid-area: historia-fabrica-1; }
@@ -220,6 +256,7 @@ body {
     color: #cccc00; }
 
 @media screen and (min-width: 1024px) {
+  /*comienzo-page-index-desktop*/
   .estructura-index {
     display: grid;
     grid-template-areas: "nav cuerpo-index" "nav cuerpo-index" "redes-index redes-index"; }
@@ -268,13 +305,16 @@ body {
     .redes-index img {
       width: 50px;
       height: 50px; }
+  /*fin-page-index-desktop*/
+  /*comienzo-page-nosotros-desktop*/
   .estructura-nosotros {
     display: grid;
     grid-template-areas: "sidenav titulo-nosotros" "sidenav cuerpo-nosotros"; }
   .cuerpo-nosotros {
     grid-template-areas: "intro-nosotros-1" "historia-nosotros-2" "historia-nosotros-3"; }
     .cuerpo-nosotros img {
-      width: 50%; }
+      width: 500px;
+      height: 400px; }
   .intro-nosotros-1 {
     grid-area: intro-nosotros-1;
     display: flex;
@@ -290,7 +330,6 @@ body {
     flex-direction: row; }
     .historia-nosotros-2 p {
       font-size: 20px;
-      font-size: 20px;
       text-align: justify; }
     .historia-nosotros-2:hover {
       color: #cccc00; }
@@ -304,7 +343,8 @@ body {
       text-align: justify; }
     .historia-nosotros-3:hover {
       color: #cccc00; }
-  /*page-catalogo-desktop*/
+  /*fin-page-nosotros-desktop*/
+  /*comienzo-page-catalogo-desktop*/
   .header-catalogo {
     display: flex;
     justify-content: right;
@@ -327,6 +367,13 @@ body {
   .catalogo-4 {
     grid-area: catalogo-4; }
   .catalogo-5 {
-    grid-area: catalogo-5; } }
-
-/*comienzo-page-la-fabrica-desktop*/
+    grid-area: catalogo-5; }
+  /*comienzo-page-la-fabrica-desktop*/
+  .main-fabrica {
+    margin: 20px; }
+    .main-fabrica img {
+      width: 100%;
+      height: 450px; }
+  /*comienzo-page-contacto-desktop*/
+  .form-main {
+    width: 450px; } }
