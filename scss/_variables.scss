@@ -1,6 +1,8 @@
 //variables
 $color-primario: #358615;
 $color-secondario: black;
+$color-terciario: hsl(0, 0%, 31%);
+
 $letra-fuente: 10px;
 
 //mapas
@@ -18,6 +20,19 @@ $mapa-border: (
     }
 
 } 
+//mapas
+//mapas
+$mapa-fondo:(
+    color-primario:yellow,
+    color-secundario:rgb(224, 146, 0),
+    color-terciario: hsl(0, 0%, 31%),
+);
+@each $colores,$fondo in $mapa-fondo {
+  .fuente-#{$colores}{
+      color:$fondo;
+  }  
+}
+
 //mixin
 @mixin size($top,$left, $margin){
     top:$top;

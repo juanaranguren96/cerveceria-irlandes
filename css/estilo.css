@@ -7,6 +7,15 @@
 .border-border-3 {
   color: #e09200; }
 
+.fuente-color-primario {
+  color: yellow; }
+
+.fuente-color-secundario {
+  color: #e09200; }
+
+.fuente-color-terciario {
+  color: #4f4f4f; }
+
 body {
   font-family: Old English text MT;
   background-color: #358615; }
@@ -19,99 +28,49 @@ body {
 
 .estructura-index {
   display: grid;
-  grid-template-columns: "nav cuerpo-index" "bot-index bot-index"; }
+  grid-template-areas: "nav"  "cuerpo-index" "redes-index"; }
+
+.nav {
+  grid-area: nav; }
 
 .cuerpo-index {
-  grid-area: cuerpo-index; }
-
-.bot-index {
-  grid-area: bot index;
+  grid-area: cuerpo-index;
+  margin-top: 50px;
   display: flex;
-  justify-content: center;
-  left: 10; }
+  flex-direction: column; }
+  .cuerpo-index img {
+    border: 3px solid;
+    width: 320px;
+    height: 200px; }
+  .cuerpo-index .imagenes-1 {
+    left: 30%;
+    top: 25%;
+    position: absolute;
+    color: #cccc00; }
+  .cuerpo-index .imagenes-2 {
+    top: 65%;
+    left: 30%;
+    position: absolute;
+    color: #cccc00; }
+  .cuerpo-index .imagenes-3 {
+    left: 35%;
+    top: 105%;
+    position: absolute;
+    color: #cccc00; }
+  .cuerpo-index .imagenes-4 {
+    left: 35%;
+    top: 145%;
+    position: absolute;
+    color: #cccc00; }
 
-.footer {
-  grid-area: footer; }
-
-.top-imagenes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 2%;
-  margin: right 20%; }
-  .top-imagenes div img {
-    transform: translate(0%); }
-
-.bot-images {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 2%;
-  margin-right: 20%; }
-  .bot-images div img {
-    transform: translate(0%);
-    width: 100%;
-    height: 100%; }
-
-.image1 {
-  position: relative;
-  border: 3px solid;
-  transition: transform 0.7s; }
-  .image1:hover {
-    transform: scale(1.3); }
-
-.image2 {
-  position: relative;
-  border: 3px solid;
-  transition: transform 0.7s; }
-  .image2:hover {
-    transform: scale(1.3); }
-
-.image3 {
-  position: relative;
-  border: 3px solid;
-  transition: transform 0.7s; }
-  .image3:hover {
-    transform: scale(1.3); }
-
-.image4 {
-  position: relative;
-  border: 3px solid;
-  transition: transform 0.7s; }
-  .image4:hover {
-    transform: scale(1.3); }
-
-.imagenes-1 {
-  top: 50%;
-  left: 30%;
-  margin: 0;
-  color: yellow;
-  position: absolute; }
-
-.imagenes-2 {
-  top: 50%;
-  left: 30%;
-  margin: 0;
-  color: yellow;
-  position: absolute; }
-
-.imagenes-3 {
-  top: 50%;
-  left: 30%;
-  margin: 0;
-  color: yellow;
-  position: absolute; }
-
-.imagenes-4 {
-  top: 50%;
-  left: 30%;
-  margin: 0;
-  color: yellow;
-  position: absolute; }
+.redes-index {
+  grid-area: redes-index; }
+  .redes-index img {
+    width: 100px; }
 
 .estructura-catalogo {
   display: grid;
-  grid-template-rows: "nav header-catalogo" "nav main-catalogo"; }
+  grid-template-areas: "nav" " header-catalogo" " main-catalogo"; }
 
 .header-catalogo {
   display: flex;
@@ -120,59 +79,79 @@ body {
   text-decoration: underline; }
   .header-catalogo h3 {
     width: 60%;
-    padding: 15px; }
+    padding: 15px;
+    color: yellow; }
 
 .main-catalogo {
-  grid-area: main catalogo;
-  display: grid;
-  grid-template-areas: "catalogo-1 catalogo-1" "catalogo-2 catalogo-2" "catalogo-3 catalogo-3" "catalogo-4 catalogo-4" "catalogo-5 catalogo-5"; }
-
-.catalogo {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-
-.catalogo-1 {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  grid-area: catalogo-1; }
+  position: relative; }
+  .main-catalogo img {
+    width: 200px; }
 
-.catalogo-2 {
+.cata {
+  font-size: 30px;
+  list-style: none; }
+  .cata:hover {
+    color: #cccc00; }
+  .cata li {
+    padding: 10px 10px;
+    display: block; }
+  .cata > li {
+    float: left; }
+    .cata > li ul {
+      padding: 0;
+      display: none;
+      min-width: 140px; }
+    .cata > li:hover > ul {
+      display: block; }
+
+.form-titulo {
+  background-color: #4f4f4f;
+  display: flex;
+  justify-content: center; }
+  .form-titulo h1 {
+    font-size: 40px;
+    text-decoration: underline; }
+
+.form-main {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  grid-area: catalogo-2; }
+  width: 450px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 7px; }
+  .form-main h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 40px; }
+  .form-main input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px; }
+  .form-main textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%; }
 
-.catalogo-3 {
+.redes-contactos {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  grid-area: catalogo-3; }
-
-.catalogo-4 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  grid-area: catalogo-4; }
-
-.catalogo-5 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  grid-area: catalogo-5; }
-  .catalogo-5 img {
-    width: 100%; }
-
-.form-contacto {
-  position: relative;
-  left: 50%; }
+  justify-content: center; }
+  .redes-contactos img {
+    width: 50px;
+    height: 50px; }
 
 .estructura-nosotros {
   display: grid;
@@ -243,109 +222,111 @@ body {
 @media screen and (min-width: 1024px) {
   .estructura-index {
     display: grid;
-    grid-template-areas: "sidenav cuerpo-index" "bot-index bot-index"; }
+    grid-template-areas: "nav cuerpo-index" "nav cuerpo-index" "redes-index redes-index"; }
+  nav {
+    grid-area: nav; }
   .cuerpo-index {
+    border: 0px;
     grid-area: cuerpo-index; }
-  .bot-index {
-    grid-area: bot-index; }
-  .top-images, .bot-images {
+    .cuerpo-index img {
+      object-fit: cover;
+      margin: 10px;
+      width: 300px;
+      height: 400px; }
+  .top-imagenes {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 2%;
-    margin-right: 20%; }
-    .top-images div img, .bot-images div img {
-      transform: translate(0%);
-      width: 360px;
-      height: 540px; }
+    flex-direction: row; }
+    .top-imagenes .imagenes-1 {
+      top: 45%;
+      left: 20%;
+      color: yellow;
+      position: absolute; }
+    .top-imagenes .imagenes-2 {
+      top: 45%;
+      left: 20%;
+      color: #cccc00;
+      position: absolute; }
+  .bot-imagenes {
+    display: flex;
+    flex-direction: row; }
+    .bot-imagenes .imagenes-3 {
+      top: 47%; }
+    .bot-imagenes .imagenes-4 {
+      top: 45%; }
   .image1, .image2, .image3, .image4 {
     position: relative;
-    border: 7px solid;
     transition: transform 0.7s; }
     .image1:hover, .image2:hover, .image3:hover, .image4:hover {
       transform: scale(1.3); }
-  .imagenes_1 {
-    top: 50%;
-    left: 30%;
-    margin: 0%;
-    color: yellow;
-    position: absolute; }
-  .imagenes_2 {
-    top: 50%;
-    left: 30%;
-    margin: 0%;
-    color: yellow;
-    position: absolute; }
-  .imagenes_3 {
-    top: 50%;
-    left: 30%;
-    margin: 0%;
-    color: yellow;
-    position: absolute; }
-  .imagenes_4 {
-    top: 50%;
-    left: 30%;
-    margin: 0%;
-    color: yellow;
-    position: absolute; }
-  .footer {
+  .redes-index {
+    grid-area: redes-index;
     position: relative;
-    grid-area: bot-index;
-    display: flex; } }
-
-.estructura-nosotros {
-  display: grid;
-  grid-template-areas: "sidenav titulo-nosotros" "sidenav cuerpo-nosotros"; }
-
-.cuerpo-nosotros {
-  grid-template-areas: "intro-nosotros-1" "historia-nosotros-2" "historia-nosotros-3"; }
-  .cuerpo-nosotros img {
-    width: 50%; }
-
-.intro-nosotros-1 {
-  grid-area: intro-nosotros-1;
-  display: flex;
-  flex-direction: row; }
-  .intro-nosotros-1 p {
-    font-size: 20px;
-    text-align: justify; }
-  .intro-nosotros-1:hover {
-    color: #cccc00; }
-
-.historia-nosotros-2 {
-  grid-area: historia-nosotros-2;
-  display: flex;
-  flex-direction: row; }
-  .historia-nosotros-2 p {
-    font-size: 20px;
-    font-size: 20px;
-    text-align: justify; }
-  .historia-nosotros-2:hover {
-    color: #cccc00; }
-
-.historia-nosotros-3 {
-  grid-area: historia-nosotros-3;
-  display: flex;
-  flex-direction: row; }
-  .historia-nosotros-3 p {
-    font-size: 20px;
-    font-size: 20px;
-    text-align: justify; }
-  .historia-nosotros-3:hover {
-    color: #cccc00; }
-
-/*page-catalogo-desktop*/
-.header-catalogo {
-  display: flex;
-  justify-content: right;
-  grid-area: header-catalogo;
-  font-size: 50px;
-  text-decoration: underline; }
-
-.main-catalogo {
-  display: grid;
-  grid-template-areas: "catalogo-1 catalogo-2" "catalogo-3 catalogo-4" "catalogo-5 catalogo-5"; }
-  .main-catalogo img {
-    width: 40%; }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .redes-index img {
+      width: 50px;
+      height: 50px; }
+  .estructura-nosotros {
+    display: grid;
+    grid-template-areas: "sidenav titulo-nosotros" "sidenav cuerpo-nosotros"; }
+  .cuerpo-nosotros {
+    grid-template-areas: "intro-nosotros-1" "historia-nosotros-2" "historia-nosotros-3"; }
+    .cuerpo-nosotros img {
+      width: 50%; }
+  .intro-nosotros-1 {
+    grid-area: intro-nosotros-1;
+    display: flex;
+    flex-direction: row; }
+    .intro-nosotros-1 p {
+      font-size: 20px;
+      text-align: justify; }
+    .intro-nosotros-1:hover {
+      color: #cccc00; }
+  .historia-nosotros-2 {
+    grid-area: historia-nosotros-2;
+    display: flex;
+    flex-direction: row; }
+    .historia-nosotros-2 p {
+      font-size: 20px;
+      font-size: 20px;
+      text-align: justify; }
+    .historia-nosotros-2:hover {
+      color: #cccc00; }
+  .historia-nosotros-3 {
+    grid-area: historia-nosotros-3;
+    display: flex;
+    flex-direction: row; }
+    .historia-nosotros-3 p {
+      font-size: 20px;
+      font-size: 20px;
+      text-align: justify; }
+    .historia-nosotros-3:hover {
+      color: #cccc00; }
+  /*page-catalogo-desktop*/
+  .header-catalogo {
+    display: flex;
+    justify-content: right;
+    grid-area: header-catalogo;
+    font-size: 50px;
+    text-decoration: underline; }
+  .main-catalogo {
+    display: grid;
+    grid-template-areas: "catalogo-1 catalogo-2" "catalogo-3 catalogo-4" "catalogo-5 catalogo-5";
+    padding: 10px 60px; }
+    .main-catalogo img {
+      width: 350px;
+      height: 280px; }
+  .catalogo-1 {
+    grid-area: catalogo-1; }
+  .catalogo-2 {
+    grid-area: catalogo-2; }
+  .catalogo-3 {
+    grid-area: catalogo-3; }
+  .catalogo-4 {
+    grid-area: catalogo-4; }
+  .catalogo-5 {
+    grid-area: catalogo-5; } }
 
 /*comienzo-page-la-fabrica-desktop*/

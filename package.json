@@ -296,5 +296,13 @@
     "yargs": "^17.5.1",
     "promise-retry": "^2.0.1"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanaranguren96/cerveceria-irlandes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juanaranguren96/cerveceria-irlandes/issues"
+  },
+  "homepage": "https://github.com/juanaranguren96/cerveceria-irlandes#readme"
 }
